@@ -14,11 +14,26 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Color.fromRGBO(161, 22, 1, 1),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.start,
         mainAxisSize: MainAxisSize.max,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text("Hello World"),
+          Text(
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporal incididunt ut labore et dolore magna aliqua.",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              // wordSpacing: 20,
+              // letterSpacing: 20,
+              decoration: TextDecoration.underline,
+              decorationColor: Colors.orange,
+              // fontStyle: FontStyle.italic,
+              overflow: TextOverflow.fade,
+            ),
+            maxLines: 4,
+            textAlign: TextAlign.center,
+          ),
           Text("Hello World"),
           Text("Hello World"),
           Text("Hello World"),
