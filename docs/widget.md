@@ -19,3 +19,33 @@ A flutter widget is a component that displays a UI element.
 ### Layout widgets
 - Column: displays children in a vertical layout
 - Row: displays children in a horizontal layout
+- Stack: displays children on the z-axis (one over another, similar to z-index in css)
+- - Positioned: used in Stack to position children
+
+- Padding: adds padding space around it's child
+- - EdgeInsets.all: adds the provided space to every side
+- - EdgeInsets.symmetric: adds padding differently for x and y axis
+- - EdgeInsets.only: adds padding to sides individually
+
+- SizedBox: it renders a box with a specified size
+
+- Center: places its child in the center
+
+- Image: used to render an image
+- - asset: for asset images
+- - create assets/images dir
+- - put the image files in the just-created dir
+- - edit pubspec.yaml file's asset block
+- - network: for online image (from url)
+- - memory: for in-memory image
+- - file: for device files
+
+- SingleChildScrollView: makes its child scrollable
+- ListView: creates a scrollable area for its children (better for long lists)
+
+- Icon: renders an IconData
+- - IconData: a vector image (svg)
+
+- AspectRatio: renders its child in a fixed aspect ratio
+
+- Container: renders a box with various properties for design
