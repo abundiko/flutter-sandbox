@@ -49,3 +49,15 @@ A flutter widget is a component that displays a UI element.
 - AspectRatio: renders its child in a fixed aspect ratio
 
 - Container: renders a box with various properties for design
+
+- Buttons: a ui element that accepts click 
+- - ElevatedButton
+- - TextButton
+- - IconButton
+- - MaterialButton
+
+- GestureDetector: receives gestures; tap, long tap, double tap
+
+- PageView: creates a swipable area for its children and all children snap
+
+- ListTile: displays a ListTile

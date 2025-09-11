@@ -135,39 +135,72 @@ class HomeScreen extends StatelessWidget {
             fit: BoxFit.cover,
           ),
 
-          Container(
-            margin: EdgeInsets.all(20),
-            padding: EdgeInsets.all(20),
-            alignment: Alignment.bottomLeft,
-            decoration: BoxDecoration(
-              color: Colors.amber,
-              borderRadius: BorderRadius.circular(20),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black87,
-                  spreadRadius: 1,
-                  blurRadius: 10,
+          ElevatedButton(
+            onPressed: () {},
+            child: Text("Go back!"),
+            style: ButtonStyle(
+              alignment: Alignment.center,
+
+              // enableFeedback: false,
+            ),
+          ),
+          TextButton(
+            onPressed: () {
+              print("Text button was pressed");
+            },
+            child: Text("text button"),
+          ),
+          IconButton(
+            onPressed: () {
+              print("icon pressed");
+            },
+            icon: Icon(Icons.vertical_align_bottom, size: 40),
+          ),
+          MaterialButton(
+            onPressed: () {
+              print("material button pressed");
+            },
+            child: Container(
+              margin: EdgeInsets.all(20),
+              padding: EdgeInsets.all(20),
+              alignment: Alignment.bottomLeft,
+              decoration: BoxDecoration(
+                color: Colors.amber,
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black87,
+                    spreadRadius: 1,
+                    blurRadius: 10,
+                  ),
+                ],
+                border: Border.all(color: Colors.white, width: 2),
+                gradient: LinearGradient(
+                  colors: [Colors.red, Colors.white, Colors.blueAccent],
+                  begin: Alignment.centerRight,
+                  end: Alignment.centerLeft,
                 ),
-              ],
-              border: Border.all(color: Colors.white, width: 2),
-              gradient: LinearGradient(
-                colors: [Colors.red, Colors.white, Colors.blueAccent],
-                begin: Alignment.centerRight,
-                end: Alignment.centerLeft,
+                image: DecorationImage(
+                  image: AssetImage("assets/images/heart.png"),
+                ),
               ),
-              image: DecorationImage(
-                image: AssetImage("assets/images/heart.png"),
+              height: 300,
+              clipBehavior: Clip.hardEdge,
+              constraints: BoxConstraints(maxHeight: 250, minHeight: 40),
+              child: Image.network(
+                "https://pbs.twimg.com/profile_images/1750733905613778944/ackI5m1I_400x400.jpg",
+                height: double.maxFinite,
+                width: double.maxFinite,
+                fit: BoxFit.cover,
               ),
             ),
-            height: 300,
-            clipBehavior: Clip.hardEdge,
-            constraints: BoxConstraints(maxHeight: 250, minHeight: 40),
-            child: Image.network(
-              "https://pbs.twimg.com/profile_images/1750733905613778944/ackI5m1I_400x400.jpg",
-              height: double.maxFinite,
-              width: double.maxFinite,
-              fit: BoxFit.cover,
-            ),
+          ),
+
+          GestureDetector(
+            onTapUp: (_) {
+              print("Tap up");
+            },
+            child: Container(height: 50, width: 50, color: Colors.pink),
           ),
         ],
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sandbox/screens/home_screen.dart';
+import 'package:sandbox/screens/pageview_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Sandbox',
-      home: HomeScreen(),
+      home: PageViewScreen(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
