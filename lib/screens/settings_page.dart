@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sandbox/screens/home_screen.dart';
+import 'package:sandbox/screens/bottom_nav_screen.dart';
+import 'package:sandbox/screens/login_screen.dart';
+import 'package:sandbox/widgets/tiles/setting_tile.dart';
+import 'package:sandbox/widgets/title/h1.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
@@ -8,35 +11,39 @@ class SettingsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        ListTile(
-          dense: true,
-          onTap: () {
-            print("list tile pressed");
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) => HomeScreen()),
-            );
-          },
-          titleAlignment: ListTileTitleAlignment.top,
-          minVerticalPadding: 20,
-          leading: ClipRRect(
-            borderRadius: BorderRadius.circular(50),
-            child: Image.network(
+        H1("Whatsapp"),
+        SettingTile(
+          title: "Home",
+          subtitle: "Go to Home Screen",
+          image:
               "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-              fit: BoxFit.cover,
-              height: 40,
-              width: 40,
-            ),
+          date: "today",
+          icon: Icons.checklist_rtl_sharp,
+        ),
+        SettingTile(
+          title: "Settings",
+          subtitle: "Go to Settings Screen",
+          image:
+              "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+          date: "today",
+        ),
+        SettingTile(
+          title: "Bottom Nav",
+          subtitle: "Go to Bottom Navigation Screen",
+          image:
+              "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+          onTap: () => Navigator.push(
+            context,
+            MaterialPageRoute(builder: (c) => BottomNavScreen()),
           ),
-          title: Text("Peter Okonkwo"),
-          subtitle: Row(
-            children: [
-              Icon(Icons.checklist_rtl_sharp),
-              SizedBox(width: 10),
-              Text("Flutter Developer", style: TextStyle(fontSize: 12)),
-            ],
+        ),
+
+        ElevatedButton(
+          onPressed: () => Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) => LoginScreen()),
           ),
-          trailing: Text("Yesterday"),
+          child: Text("Go to Login"),
         ),
       ],
     );

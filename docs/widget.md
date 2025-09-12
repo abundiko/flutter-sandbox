@@ -61,3 +61,10 @@ A flutter widget is a component that displays a UI element.
 - PageView: creates a swipable area for its children and all children snap
 
 - ListTile: displays a ListTile
+
+- TextField: displays an input field for collecting user input
+- - TextEditingController: used to acces the value in a TextField
+
+- IndexStack: creates a stack of widgets but shows the Widget at a provided index
+
+- Expanded: fills up the available space (use only in a Row or Column)
