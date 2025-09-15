@@ -68,3 +68,5 @@ A flutter widget is a component that displays a UI element.
 - IndexStack: creates a stack of widgets but shows the Widget at a provided index
 
 - Expanded: fills up the available space (use only in a Row or Column)
+
+- Wrap: wraps its children in a flex-like layout
