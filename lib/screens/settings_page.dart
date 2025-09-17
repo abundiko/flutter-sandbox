@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sandbox/screens/airtel_screen.dart';
 import 'package:sandbox/screens/bottom_nav_screen.dart';
 import 'package:sandbox/screens/device_info_screen.dart';
 import 'package:sandbox/screens/home_screen.dart';
@@ -57,6 +58,13 @@ class SettingsPage extends StatelessWidget {
             context,
             MaterialPageRoute(builder: (c) => BottomNavScreen()),
           ),
+        ),
+        SettingTile(
+          title: "Airtel Home",
+          subtitle: "Go to Airtel Home Screen",
+          image:
+              "https://pbs.twimg.com/profile_images/1750733905613778944/ackI5m1I_400x400.jpg",
+          onTap: () => toScreen(context, AirtelScreen()),
         ),
         SettingTile(
           title: "Open X",
