@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sandbox/screens/home_screen.dart';
 import 'package:sandbox/screens/settings_page.dart';
 
 class PageViewScreen extends StatelessWidget {

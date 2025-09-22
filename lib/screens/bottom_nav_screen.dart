@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sandbox/tabs/home_tab.dart';
-import 'package:sandbox/widgets/title/h1.dart';
 
 class BottomNavScreen extends StatefulWidget {
   const BottomNavScreen({super.key});

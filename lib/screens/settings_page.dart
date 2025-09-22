@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:sandbox/screens/airtel_screen.dart';
 import 'package:sandbox/screens/bottom_nav_screen.dart';
 import 'package:sandbox/screens/device_info_screen.dart';
-import 'package:sandbox/screens/home_screen.dart';
 import 'package:sandbox/screens/login_screen.dart';
 import 'package:sandbox/screens/weather_screen.dart';
 import 'package:sandbox/screens/webview_screen.dart';
 import 'package:sandbox/utils/navigation.dart';
+import 'package:sandbox/widgets/settings/settings_menu.dart';
+import 'package:sandbox/widgets/settings/theme_switcher.dart';
 import 'package:sandbox/widgets/tiles/setting_tile.dart';
 import 'package:sandbox/widgets/title/h1.dart';
 import 'package:toastification/toastification.dart';
@@ -18,7 +19,21 @@ class SettingsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        H1("Whatsapp"),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "WhatsappRed",
+                style: Theme.of(context).textTheme.headlineLarge!.copyWith(
+                  color: Theme.of(context).primaryColor,
+                ),
+              ),
+              SettingsMenu(),
+            ],
+          ),
+        ),
         SettingTile(
           title: "Home",
           subtitle: "Go to Home Screen",
@@ -89,6 +104,8 @@ class SettingsPage extends StatelessWidget {
           ),
           child: Text("Go to Login"),
         ),
+
+        ThemeSwitcher(),
       ],
     );
   }

@@ -137,12 +137,12 @@ class HomeScreen extends StatelessWidget {
 
           ElevatedButton(
             onPressed: () {},
-            child: Text("Go back!"),
             style: ButtonStyle(
               alignment: Alignment.center,
 
               // enableFeedback: false,
             ),
+            child: Text("Go back!"),
           ),
           TextButton(
             onPressed: () {
