@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gemini/flutter_gemini.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:sandbox/private.dart';
 import 'package:sandbox/screens/pageview_screen.dart';
 import 'package:sandbox/state/settings_state.dart';
 import 'package:sandbox/utils/theme.dart';
@@ -10,6 +12,7 @@ void main() async {
   await Hive.initFlutter();
   await Hive.openBox("main_box");
   WidgetsFlutterBinding.ensureInitialized();
+  Gemini.init(apiKey: googleAiApiKey);
   runApp(ProviderScope(child: const MyApp()));
 }
 

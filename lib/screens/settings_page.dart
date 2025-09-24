@@ -3,6 +3,7 @@ import 'package:sandbox/screens/airtel_screen.dart';
 import 'package:sandbox/screens/bottom_nav_screen.dart';
 import 'package:sandbox/screens/device_info_screen.dart';
 import 'package:sandbox/screens/login_screen.dart';
+import 'package:sandbox/screens/storybook_screen.dart';
 import 'package:sandbox/screens/weather_screen.dart';
 import 'package:sandbox/screens/webview_screen.dart';
 import 'package:sandbox/utils/navigation.dart';
@@ -95,6 +96,13 @@ class SettingsPage extends StatelessWidget {
           image:
               "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
           onTap: () => toScreen(context, WeatherScreen()),
+        ),
+        SettingTile(
+          title: "Storybook AI",
+          subtitle: "generate stories with ai",
+          image:
+              "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+          onTap: () => toScreen(context, StorybookScreen()),
         ),
 
         ElevatedButton(
